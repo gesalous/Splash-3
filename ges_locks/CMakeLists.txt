@@ -26,11 +26,11 @@ endif()
 
 # Create the library with the appropriate source file
 if(SPIN_LOCK)
-    add_library(ges_locks STATIC src/spin_lock.c)
+    add_library(ges_locks STATIC src/spin_lock.c src/ges_barrier.c)
 elseif(TICKET_LOCK)
-    add_library(ges_locks STATIC src/ticket_lock.c)
+    add_library(ges_locks STATIC src/ticket_lock.c src/ges_barrier.c)
 else()
-    add_library(ges_locks STATIC src/mcs_lock.c)
+    add_library(ges_locks STATIC src/mcs_lock.c src/ges_barrier.c)
 endif()
 
 # Set output directories
@@ -45,4 +45,4 @@ target_link_libraries(counter_test PRIVATE ges_locks pthread)
 install(TARGETS ges_locks
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib)
-install(FILES include/ges_lock.h DESTINATION include)
+install(FILES include/ges_lock.h include/ges_barrier.h DESTINATION include)
