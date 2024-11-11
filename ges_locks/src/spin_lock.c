@@ -1,11 +1,10 @@
 #include "../include/ges_lock.h"
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 
 void ges_lock_init(ges_lock_t * lock) {
-  lock->locked = false;
+  lock->locked = 0;
 }
 
 void ges_lock(ges_lock_t *lock, ges_node_t *node) {

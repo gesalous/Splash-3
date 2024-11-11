@@ -45,4 +45,4 @@ target_link_libraries(counter_test PRIVATE ges_locks pthread)
 install(TARGETS ges_locks
         ARCHIVE DESTINATION lib
         LIBRARY DESTINATION lib)
-install(FILES include/lock.h DESTINATION include)
+install(FILES include/ges_lock.h DESTINATION include)
