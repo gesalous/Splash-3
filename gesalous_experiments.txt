@@ -1,0 +1,78 @@
+MCS LOCKS 
+time ./kernels/lu/contiguous_blocks/LU -n 10000 -p 4
+
+Blocked Dense LU Factorization
+     10000 by 10000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            53             0             1            51             1
+
+                            TIMING INFORMATION
+Start time                        :       1731357006
+Initialization finish time        :       1731357012
+Overall finish time               :       1731357065
+Total time with initialization    :               59
+Total time without initialization :               53
+
+
+real	0m59,296s
+user	3m37,478s
+sys	0m0,178s
+
+SPIN_LOCKS
+[gesalous@teboparallax codes]$ time ./kernels/lu/contiguous_blocks/LU -n 10000 -p 4
+
+Blocked Dense LU Factorization
+     10000 by 10000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            50             0             0            50             0
+
+                            TIMING INFORMATION
+Start time                        :       1731357275
+Initialization finish time        :       1731357281
+Overall finish time               :       1731357331
+Total time with initialization    :               56
+Total time without initialization :               50
+
+
+real	0m55,962s
+user	3m24,776s
+sys	0m0,205s
+
+TICKET_LOCKS
+time ./kernels/lu/contiguous_blocks/LU -n 10000 -p 4
+
+Blocked Dense LU Factorization
+     10000 by 10000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            53             0             0            52             1
+
+                            TIMING INFORMATION
+Start time                        :       1731357430
+Initialization finish time        :       1731357436
+Overall finish time               :       1731357489
+Total time with initialization    :               59
+Total time without initialization :               53
+
+
+real	0m58,488s
+user	3m34,722s
+sys	0m0,197s
+
