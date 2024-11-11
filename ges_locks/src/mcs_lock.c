@@ -1,4 +1,4 @@
-#include "../include/lock.h"
+#include "../include/ges_lock.h"
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -6,23 +6,19 @@
 
 
 
-struct ges_lock {
-  struct ges_node *tail;
-};
 
-ges_lock_t ges_lock_init(void) {
+void ges_lock_init(ges_lock_t *lock) {
 
-  ges_lock_t lock = calloc(1UL, sizeof(struct ges_lock));
-  return lock;
+  lock->tail = NULL;
 }
 
-void ges_lock(ges_lock_t lock, ges_node_t node) {
+void ges_lock(ges_lock_t *lock, ges_node_t *node) {
 
   node->next = NULL;
   node->waiting = true;
 
   // Atomically set the tail to the current node and get the previous tail
-  ges_node_t prev = (ges_node_t)__sync_lock_test_and_set(&lock->tail, node);
+  ges_node_t * prev = (ges_node_t *)__sync_lock_test_and_set(&lock->tail, node);
   if (NULL == prev)
     return;
 
@@ -32,7 +28,7 @@ void ges_lock(ges_lock_t lock, ges_node_t node) {
   }
 }
 
-void ges_unlock(ges_lock_t lock, ges_node_t node) {
+void ges_unlock(ges_lock_t *lock, ges_node_t *node) {
   if (node->next == NULL) {
     if (__sync_bool_compare_and_swap((uint64_t *)&lock->tail, (uint64_t)node,
                                      NULL)) {

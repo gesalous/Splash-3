@@ -1,4 +1,4 @@
-#include "lock.h"
+#include "ges_lock.h"
 #include <errno.h>
 #include <pthread.h>
 #include <stdint.h>
@@ -13,7 +13,7 @@ static volatile uint64_t counter;
 struct worker{
     uint64_t operations_per_thread;
     int thread_id;
-    ges_lock_t lock;
+    ges_lock_t *lock;
 };
 
 // Thread function
@@ -49,7 +49,8 @@ int main(int argc, char* argv[]) {
         return 1;
     }
   
-    ges_lock_t lock = ges_lock_init();
+    ges_lock_t lock;
+    ges_lock_init(&lock);
 
     // Calculate operations per thread
     long long operations_per_thread = total_operations / num_threads;
@@ -71,7 +72,7 @@ int main(int argc, char* argv[]) {
     for (int i = 0; i < num_threads; i++) {
         workers[i].operations_per_thread = operations_per_thread;
         workers[i].thread_id = i;
-        workers[i].lock = lock;
+        workers[i].lock = &lock;
         
         int ret = pthread_create(&threads[i], NULL, thread_work, &workers[i]);
         if (ret != 0) {
