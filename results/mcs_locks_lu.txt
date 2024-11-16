@@ -1,0 +1,132 @@
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 1
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     1 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            70             0             0            70             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764156
+Initialization finish time        :       1731764160
+Overall finish time               :       1731764230
+Total time with initialization    :               74
+Total time without initialization :               70
+
+
+real	1m14.196s
+user	1m14.113s
+sys	0m0.081s
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 2
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            36             0             0            36             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764256
+Initialization finish time        :       1731764260
+Overall finish time               :       1731764296
+Total time with initialization    :               40
+Total time without initialization :               36
+
+
+real	0m39.174s
+user	1m14.437s
+sys	0m0.093s
+
+
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 4
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            18             0             0            18             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764319
+Initialization finish time        :       1731764323
+Overall finish time               :       1731764341
+Total time with initialization    :               22
+Total time without initialization :               18
+
+
+real	0m21.956s
+user	1m15.703s
+sys	0m0.161s
+
+
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 8
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     8 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            10             0             0            10             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764361
+Initialization finish time        :       1731764364
+Overall finish time               :       1731764374
+Total time with initialization    :               13
+Total time without initialization :               10
+
+
+real	0m13.243s
+user	1m17.972s
+sys	0m0.123s
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 16
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0             6             0             0             6             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764397
+Initialization finish time        :       1731764400
+Overall finish time               :       1731764406
+Total time with initialization    :                9
+Total time without initialization :                6
+
+
+real	0m9.781s
+user	1m30.180s
+sys	0m0.166s
+
+
+
+

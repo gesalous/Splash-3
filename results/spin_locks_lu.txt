@@ -1,0 +1,138 @@
+LU mcs locks with spin locks
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 1
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     1 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            71             0             0            71             0
+
+                            TIMING INFORMATION
+Start time                        :       1731763765
+Initialization finish time        :       1731763768
+Overall finish time               :       1731763839
+Total time with initialization    :               74
+Total time without initialization :               71
+
+
+real	1m14.194s
+user	1m14.107s
+sys	0m0.084s
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 2
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            36             0             0            36             0
+
+                            TIMING INFORMATION
+Start time                        :       1731763855
+Initialization finish time        :       1731763859
+Overall finish time               :       1731763895
+Total time with initialization    :               40
+Total time without initialization :               36
+
+
+real	0m39.139s
+user	1m14.397s
+sys	0m0.086s
+
+
+
+ time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 4
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            18             0             0            18             0
+
+                            TIMING INFORMATION
+Start time                        :       1731763951
+Initialization finish time        :       1731763955
+Overall finish time               :       1731763973
+Total time with initialization    :               22
+Total time without initialization :               18
+
+
+real	0m21.934s
+user	1m15.772s
+sys	0m0.122s
+
+
+
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 8
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     8 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0             9             0             0             9             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764014
+Initialization finish time        :       1731764018
+Overall finish time               :       1731764027
+Total time with initialization    :               13
+Total time without initialization :                9
+
+
+real	0m13.107s
+user	1m17.530s
+sys	0m0.154s
+
+
+
+time ./kernels/lu/contiguous_blocks/LU -n 6000 -p 16
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0             5             0             1             4             0
+
+                            TIMING INFORMATION
+Start time                        :       1731764053
+Initialization finish time        :       1731764057
+Overall finish time               :       1731764062
+Total time with initialization    :                9
+Total time without initialization :                5
+
+
+real	0m9.770s
+user	1m29.503s
+sys	0m0.177s
+
+
+
+
+
+
