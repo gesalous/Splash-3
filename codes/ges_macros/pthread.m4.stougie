@@ -16,32 +16,45 @@ dnl Gem5 ROI markers
 dnl define(SPLASH3_ROI_BEGIN, `m5_dumpreset_stats(0, 0)')
 dnl define(SPLASH3_ROI_END, `m5_dumpreset_stats(0, 0)')
 
+
+
+
 define(BARRIER,
 `{
-pthread_mutex_lock(&(($1).bar_mutex));
-($1).bar_teller++;
-if (($1).bar_teller == ($2)) {
-	($1).bar_teller = 0;
-	pthread_cond_broadcast(&(($1).bar_cond));
-} else {
-	pthread_cond_wait(&(($1).bar_cond), &(($1).bar_mutex));
-}
-pthread_mutex_unlock(&(($1).bar_mutex));}
+ ges_barrier_wait(&$1, $2);
+ }
 ')
-define(BARDEC, `struct { pthread_mutex_t bar_mutex; pthread_cond_t bar_cond; unsigned bar_teller; } $1;')
+define(BARDEC, `ges_barrier_t  $1;')
 define(BARINIT,
 `{
-	pthread_mutex_init(&(($1).bar_mutex), NULL);
-	pthread_cond_init(&(($1).bar_cond), NULL);
-	($1).bar_teller=0;
+  ges_barrier_init(&$1); 
 }')
+dnl define(BARRIER,
+dnl `{
+dnl pthread_mutex_lock(&(($1).bar_mutex));
+dnl ($1).bar_teller++;
+dnl if (($1).bar_teller == ($2)) {
+dnl 	($1).bar_teller = 0;
+dnl 	pthread_cond_broadcast(&(($1).bar_cond));
+dnl } else {
+dnl 	pthread_cond_wait(&(($1).bar_cond), &(($1).bar_mutex));
+dnl }
+dnl pthread_mutex_unlock(&(($1).bar_mutex));}
+dnl ')
+dnl define(BARDEC, `struct { pthread_mutex_t bar_mutex; pthread_cond_t bar_cond; unsigned 2bar_teller; } $1;')
+dnl define(BARINIT,
+dnl `{
+dnl 	pthread_mutex_init(&(($1).bar_mutex), NULL);
+dnl 	pthread_cond_init(&(($1).bar_cond), NULL);
+dnl 	($1).bar_teller=0;
+dnl }')
 
 
 
 define(LOCKDEC, `ges_lock_t $1;')
 define(LOCKINIT, `{ges_lock_init(&($1));}')
-define(LOCK, `ges_node_t psoli; {ges_lock(&($1), &psoli);}')
-define(UNLOCK, `{ges_unlock(&($1), &psoli);}')
+define(LOCK, `ges_node_t mcs_ticket; {ges_lock(&($1), &mcs_ticket);}')
+define(UNLOCK, `{ges_unlock(&($1), &mcs_ticket);}')
 
 dnl define(LOCKDEC, `pthread_mutex_t $1;')
 dnl define(LOCKINIT, `{pthread_mutex_init(&($1),NULL);}')
@@ -94,6 +107,7 @@ define(MAIN_END, `{exit(0);}')
 
 define(INCLUDES,`
 #include "ges_lock.h"
+#include "ges_barrier.h"
 #include <pthread.h>
 #include <stdlib.h>
 #include <semaphore.h>
