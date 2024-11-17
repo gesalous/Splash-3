@@ -1,0 +1,131 @@
+time ./LU -n 6000 -p 1
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     1 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            70             0             0            70             0
+
+                            TIMING INFORMATION
+Start time                        :       1731849598
+Initialization finish time        :       1731849602
+Overall finish time               :       1731849672
+Total time with initialization    :               74
+Total time without initialization :               70
+
+
+real	1m14.211s
+user	1m14.125s
+sys	0m0.085s
+
+
+time ./LU -n 6000 -p 2
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     2 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            36             0             0            36             0
+
+                            TIMING INFORMATION
+Start time                        :       1731849688
+Initialization finish time        :       1731849691
+Overall finish time               :       1731849727
+Total time with initialization    :               39
+Total time without initialization :               36
+
+
+real	0m39.147s
+user	1m14.422s
+sys	0m0.088s
+
+
+time ./LU -n 6000 -p 4
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     4 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0            17             0             0            17             0
+
+                            TIMING INFORMATION
+Start time                        :       1731849740
+Initialization finish time        :       1731849744
+Overall finish time               :       1731849761
+Total time with initialization    :               21
+Total time without initialization :               17
+
+
+real	0m22.042s
+user	1m15.525s
+sys	0m0.152s
+
+
+./LU -n 6000 -p 8
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     8 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0             9             0             0             9             0
+
+                            TIMING INFORMATION
+Start time                        :       1731849779
+Initialization finish time        :       1731849783
+Overall finish time               :       1731849792
+Total time with initialization    :               13
+Total time without initialization :                9
+
+
+real	0m13.388s
+user	1m18.352s
+sys	0m0.123s
+
+
+ time ./LU -n 6000 -p 16
+
+Blocked Dense LU Factorization
+     6000 by 6000 Matrix
+     16 Processors
+     16 by 16 Element Blocks
+
+
+                            PROCESS STATISTICS
+              Total      Diagonal     Perimeter      Interior       Barrier
+ Proc         Time         Time         Time           Time          Time
+    0             5             0             0             5             0
+
+                            TIMING INFORMATION
+Start time                        :       1731849808
+Initialization finish time        :       1731849812
+Overall finish time               :       1731849817
+Total time with initialization    :                9
+Total time without initialization :                5
+
+
+real	0m9.600s
+user	1m28.492s
+sys	0m0.225s
+
+
+

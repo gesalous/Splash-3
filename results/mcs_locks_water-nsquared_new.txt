@@ -1,0 +1,270 @@
+1 process
+time ./WATER-NSQUARED < ./inputs/parsec_gesalous 
+Using 1 procs on 10 steps of 8000 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =     8000
+NUMBER OF PROCESSORS       =        1
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =       10 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 19.9999899999999968
+BOXL =  62.127524
+CUTOFF =   6.212752
+XS =   3.106378
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         3        1.57401      0.05273     10.48559                      -2.08678
+           10.026        305.64857        -19.54594
+         6        1.78006      0.21393     10.02734                      -1.99605
+           10.025        321.97458        -20.61442
+         9        2.08157      0.47245      9.30973                      -1.83852
+           10.025        345.47226        -22.17092
+COMPUTESTART (after initialization) = 1731851089
+COMPUTEEND = 1731851133
+COMPUTETIME (after initialization) = 44
+Measured Time (2nd timestep onward) = 38
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 38
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 10.0252 (note: XTT value is garbage if NPRINT > NSTEP)
+
+real	0m44.155s
+user	0m44.149s
+sys	0m0.005s
+
+2 processes 
+time ./WATER-NSQUARED < ./inputs/parsec_gesalous 
+Using 2 procs on 10 steps of 8000 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =     8000
+NUMBER OF PROCESSORS       =        2
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =       10 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 19.9999899999999968
+BOXL =  62.127524
+CUTOFF =   6.212752
+XS =   3.106378
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         3        2.17885      0.05985      5.25479                      -1.05374
+            6.440        458.60218        -19.75415
+         6        2.49884      0.24685      5.03579                      -1.01407
+            6.767        466.96171        -17.67701
+         9        3.02938      0.50500      4.68845                      -0.93735
+            7.285        477.61919        -19.17780
+COMPUTESTART (after initialization) = 1731851162
+COMPUTEEND = 1731851185
+COMPUTETIME (after initialization) = 23
+Measured Time (2nd timestep onward) = 17
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 17
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 7.28549 (note: XTT value is garbage if NPRINT > NSTEP)
+
+real	0m23.513s
+user	0m43.941s
+sys	0m0.008s
+
+
+
+4 processes
+time ./WATER-NSQUARED < ./inputs/parsec_gesalous 
+Using 4 procs on 10 steps of 8000 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =     8000
+NUMBER OF PROCESSORS       =        4
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =       10 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 19.9999899999999968
+BOXL =  62.127524
+CUTOFF =   6.212752
+XS =   3.106378
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         3        2.76744      0.06603      5.26707                      -1.05765
+            7.043        618.62141        -19.92301
+         6        3.48561      0.28540      5.06728                      -1.02482
+            7.813        634.07271        -18.90372
+         9        3.65022      0.59970      4.74616                      -0.95711
+            8.039        637.78444        -19.67100
+COMPUTESTART (after initialization) = 1731851214
+COMPUTEEND = 1731851227
+COMPUTETIME (after initialization) = 13
+Measured Time (2nd timestep onward) = 9
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 9
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 8.03897 (note: XTT value is garbage if NPRINT > NSTEP)
+
+real	0m12.695s
+user	0m44.372s
+sys	0m0.023s
+
+
+8 processes
+time ./WATER-NSQUARED < ./inputs/parsec_gesalous 
+Using 8 procs on 10 steps of 8000 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =     8000
+NUMBER OF PROCESSORS       =        8
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =       10 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 19.9999899999999968
+BOXL =  62.127524
+CUTOFF =   6.212752
+XS =   3.106378
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         3        3.32371      0.06722      2.66170                      -0.54506
+            5.508        773.46353        -20.04622
+         6        5.97538      0.23448      1.36034                      -0.28617
+            7.284        733.44366        -19.28125
+         9        6.20496      0.45114      2.57273                      -0.53969
+            8.689        716.50131        -19.74187
+COMPUTESTART (after initialization) = 1731851255
+COMPUTEEND = 1731851261
+COMPUTETIME (after initialization) = 6
+Measured Time (2nd timestep onward) = 5
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 5
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 8.68914 (note: XTT value is garbage if NPRINT > NSTEP)
+
+real	0m6.491s
+user	0m44.218s
+sys	0m0.015s
+
+
+16 processes
+time ./WATER-NSQUARED < ./inputs/parsec_gesalous 
+Using 16 procs on 10 steps of 8000 mols
+Other parameters:
+	TSTEP = 1.50e-16
+	NORDER = 6
+	NSAVE = -1
+	NRST = 3000
+	NPRINT = 3
+	NFMC = 0
+	CUTOFF = 6.212752
+
+
+TEMPERATURE                =   298.00 K
+DENSITY                    =  0.99800 G/C.C.
+NUMBER OF MOLECULES        =     8000
+NUMBER OF PROCESSORS       =       16
+TIME STEP                  = 1.50e-01 SEC
+ORDER USED TO SOLVE F=MA   =        6 
+NO. OF TIME STEPS          =       10 
+FREQUENCY OF DATA SAVING   =       -1 
+FREQUENCY TO WRITE RST FILE=     3000 
+SPHERICAL CUTOFF RADIUS    =   6.2128 ANGSTROM
+
+NS = 19.9999899999999968
+BOXL =  62.127524
+CUTOFF =   6.212752
+XS =   3.106378
+ZERO = 1.55319
+WCOS = 0.585882
+WSIN = 0.756950
+***** NEW RUN STARTING FROM REGULAR LATTICE *****
+         3        4.69528      0.08886      4.61260                      -0.94182
+            8.455       1078.84392        -19.32652
+         6        5.61873      0.38053      3.87169                      -0.79641
+            9.075       1085.94461        -18.92066
+         9        6.41245      0.90230      5.51551                      -1.14987
+           11.680       1056.38355        -20.07938
+COMPUTESTART (after initialization) = 1731851294
+COMPUTEEND = 1731851298
+COMPUTETIME (after initialization) = 4
+Measured Time (2nd timestep onward) = 2
+Intramolecular time only (2nd timestep onward) = 0
+Intermolecular time only (2nd timestep onward) = 2
+Other time (2nd timestep onward) = 0
+
+Exited Happily with XTT = 11.6804 (note: XTT value is garbage if NPRINT > NSTEP)
+
+real	0m3.332s
+user	0m44.318s
+sys	0m0.037s
+
+
+
+
+
+
+
